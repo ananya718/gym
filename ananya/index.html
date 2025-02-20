@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simple Webpage with Navbar</title>
+    <style>
+        /* Basic reset */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            /* Background image */
+            background-image: url('https://wallpaperaccess.com/full/1108014.jpg'); /* Change this URL to your desired image */
+            background-size: cover;
+            background-position: center center;
+            background-attachment: fixed;
+            height: 100%; /* Ensure the body covers full height */
+            display: flex;
+            flex-direction: column; /* Flexbox to layout the page */
+        }
+
+        /* Navbar styles */
+        nav {
+            background-color: rgba(51, 51, 51, 0.7); /* Semi-transparent background for navbar */
+            padding: 10px 0;
+        }
+
+        nav ul {
+            list-style-type: none;
+            text-align: center;
+        }
+
+        nav ul li {
+            display: inline;
+            margin: 0 15px;
+        }
+
+        nav ul li a {
+            color: white;
+            text-decoration: none;
+            font-size: 18px;
+            transition: color 0.3s;
+        }
+
+        nav ul li a:hover {
+            color: #ff6347; /* Hover color */
+        }
+
+        /* Page content styles */
+        .content {
+            padding: 50px;
+            text-align: center;
+            color: #fff; /* Text color for content */
+            flex: 1; /* This ensures the content section takes all available space */
+        }
+
+        h1 {
+            color: #fff; /* Heading color */
+        }
+
+        p {
+            color: #fff; /* Paragraph color */
+            font-size: 18px;
+        }
+
+        /* Services Section */
+        .services {
+            background-color: rgba(0, 0, 0, 0.6); /* Dark background to make text pop */
+            color: white;
+            padding: 50px 0;
+            text-align: center;
+        }
+
+        .services h2 {
+            font-size: 36px;
+            margin-bottom: 20px;
+        }
+
+        .services .service-cards {
+            display: flex;
+            justify-content: space-around;
+            flex-wrap: wrap;
+            gap: 20px;
+        }
+
+        .service-card {
+            background-color: #333;
+            padding: 20px;
+            border-radius: 10px;
+            width: 250px;
+            text-align: center;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease-in-out;
+        }
+
+        .service-card:hover {
+            transform: scale(1.05); /* Slight zoom on hover */
+        }
+
+        .service-card img {
+            width: 100%;
+            height: 150px;
+            object-fit: cover;
+            border-radius: 8px;
+            margin-bottom: 15px;
+        }
+
+        .service-card h3 {
+            margin-bottom: 15px;
+            color: #ff6347; /* Highlight color */
+        }
+
+        .service-card p {
+            color: #ccc;
+        }
+
+        /* Footer styles */
+        .footer {
+            background-color: rgba(51, 51, 51, 0.7); /* Semi-transparent background for footer */
+            color: white;
+            text-align: center;
+            padding: 20px 0;
+            position: relative;
+            bottom: 0;
+            width: 100%;
+        }
+
+        /* Media Query for mobile responsiveness */
+        @media (max-width: 768px) {
+            nav ul li {
+                display: block;
+                margin: 10px 0;
+            }
+
+            nav ul li a {
+                font-size: 16px;
+            }
+
+            .content {
+                padding: 30px;
+            }
+
+            h1 {
+                font-size: 28px;
+            }
+
+            p {
+                font-size: 16px;
+            }
+
+            .services .service-cards {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .service-card {
+                width: 80%; /* Make service cards responsive */
+                margin-bottom: 20px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Navbar -->
+    <nav>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="service.html">Services</a></li>
+            <li><a href="contact.html">Contact</a></li>
+        </ul>
+    </nav>
+
+    <!-- Content -->
+    <div class="content">
+        <h1>COOL MULTY GYM</h1>
+        <p>This is a simple webpage with a navigation bar. You can add more content as needed.</p>
+    </div>
+
+    <!-- Services Section -->
+    <div class="services">
+        <h2>Our Services</h2>
+        <div class="service-cards">
+            <div class="service-card">
+                <img src="https://filesedc.com/uploads/363/img/2023/03/1200/entrenador-personal-sosteniendo-unas-pesas-en-un-gimnasio-6409ea99bcf34.jpg" alt="Personal Training">
+                <h3>Personal Training</h3>
+                <p>One-on-one personal training with expert coaches to help you achieve your fitness goals faster.</p>
+            </div>
+            <div class="service-card">
+                <img src="https://i.pinimg.com/736x/53/73/6a/53736a258b9d0b3abc7f3dd37aa724f3--fitness-gym-body-pump.jpg" alt="Group Classes">
+                <h3>Group Classes</h3>
+                <p>Join our fun and engaging group fitness classes, including yoga, pilates, and high-intensity workouts.</p>
+            </div>
+            <div class="service-card">
+                <img src="https://img.freepik.com/premium-photo/healthy-lifestyle-proper-nutrition-diet-health-support-good-food-exercise-striving-fitness-heart-sports-gym-motivation-good-mood-attitude-habits-vegetables-fruits_771426-4972.jpg" alt="Nutrition Plans">
+                <h3>Nutrition Plans</h3>
+                <p>Get a customized nutrition plan tailored to your body’s needs, to fuel your workouts and health.</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <div class="footer">
+        <p>&copy; 2025 Multi Gym. All rights reserved.</p>
+    </div>
+
+</body>
+</html>
